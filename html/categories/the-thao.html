@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thể Thao - MarketHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+     Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="main.html">
+                <span class="brand-icon">M</span>
+                MarketHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="main.html#categories">Danh Mục</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sell.html">Bán Hàng</a>
+                    </li>
+                    <li class="nav-item" id="authButton">
+                        <a href="sign-in.html" class="btn btn-primary ms-3">Đăng Nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     Category Header 
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="hero-title">⚽ Thể Thao</h1>
+                <p class="hero-subtitle">Trang thiết bị thể thao chất lượng cao</p>
+                <a href="main.html" class="btn btn-outline-light">← Quay Lại Trang Chủ</a>
+            </div>
+        </div>
+    </section>
+
+     Products Section 
+    <section class="products">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title mb-0">Sản Phẩm Thể Thao</h2>
+                <div class="filter-buttons">
+                    <button class="btn btn-sm btn-outline-secondary active">Tất Cả</button>
+                    <button class="btn btn-sm btn-outline-secondary">Mới</button>
+                    <button class="btn btn-sm btn-outline-secondary">Phổ Biến</button>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                 Product 1 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Thảm Yoga" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Thảm Yoga Cao Cấp</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.000.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Thảm Yoga Cao Cấp', '1.000.000₫', 'Thảm yoga chống trượt với đệm êm ái cho sự thoải mái khi tập luyện.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 2 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Bình Nước" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Bình Nước Giữ Nhiệt</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">750.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Bình Nước Giữ Nhiệt', '750.000₫', 'Giữ đồ uống lạnh 24 giờ hoặc nóng 12 giờ với bình cao cấp này.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 3 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Nổi Bật</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Tạ Tay" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Bộ Tạ Tay Điều Chỉnh</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">3.500.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Bộ Tạ Tay Điều Chỉnh', '3.500.000₫', 'Bộ tạ tay có thể điều chỉnh từ 2-24kg, tiết kiệm không gian.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 4 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Dây Kháng Lực" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Bộ Dây Kháng Lực</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">450.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Bộ Dây Kháng Lực', '450.000₫', 'Bộ 5 dây kháng lực với các mức độ khác nhau cho tập luyện toàn thân.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 5 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Mới</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Giày Chạy Bộ" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Giày Chạy Bộ Chuyên Nghiệp</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">2.800.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Giày Chạy Bộ Chuyên Nghiệp', '2.800.000₫', 'Giày chạy bộ với công nghệ đệm tiên tiến và trọng lượng siêu nhẹ.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 6 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Dây Nhảy" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Dây Nhảy Tốc Độ Cao</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">350.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Dây Nhảy Tốc Độ Cao', '350.000₫', 'Dây nhảy chuyên nghiệp với vòng bi trơn tru và tay cầm chống trượt.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 7 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge sale">Giảm Giá</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Túi Gym" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Túi Gym Đa Năng</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">850.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Túi Gym Đa Năng', '850.000₫', 'Túi gym chống nước với nhiều ngăn tiện dụng và quai đeo thoải mái.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Product 8 
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Con Lăn Massage" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Con Lăn Massage Cơ</h5>
+                            <p class="product-category">Thể Thao</p>
+                            <div class="product-footer">
+                                <span class="product-price">650.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Con Lăn Massage Cơ', '650.000₫', 'Con lăn foam giúp thư giãn cơ bắp và phục hồi sau tập luyện.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Product Detail Modal 
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductTitle">Chi Tiết Sản Phẩm</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalProductImage" src="/placeholder.svg" alt="Sản Phẩm" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductName">Tên Sản Phẩm</h3>
+                            <p class="text-muted">Thể Thao</p>
+                            <h2 class="text-primary mb-4" id="modalProductPrice">0₫</h2>
+                            <p id="modalProductDescription">Mô tả sản phẩm ở đây.</p>
+                            <div class="d-grid gap-2 mt-4">
+                                <button class="btn btn-primary btn-lg">Mua Ngay</button>
+                                <button class="btn btn-outline-secondary">Thêm Vào Giỏ</button>
+                            </div>
+                            <div class="product-meta mt-4">
+                                <p><strong>Người Bán:</strong> Cửa Hàng Cao Cấp</p>
+                                <p><strong>Tình Trạng:</strong> Hàng Mới</p>
+                                <p><strong>Vận Chuyển:</strong> Miễn Phí</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MarketHub</h5>
+                    <p>Sàn giao dịch đáng tin cậy để mua bán sản phẩm chất lượng.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên Kết Nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Về Chúng Tôi</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Điều Khoản Dịch Vụ</a></li>
+                        <li><a href="#">Chính Sách Bảo Mật</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kết Nối Với Chúng Tôi</h5>
+                    <p>Theo dõi chúng tôi trên mạng xã hội để cập nhật và ưu đãi.</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2025 MarketHub. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+        function showProductDetail(name, price, description) {
+            if (!auth.isLoggedIn()) {
+                if (confirm('Bạn cần đăng nhập để xem chi tiết sản phẩm. Đăng nhập ngay?')) {
+                    localStorage.setItem('redirectAfterLogin', window.location.href);
+                    window.location.href = 'sign-in.html';
+                }
+                return;
+            }
+
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductTitle').textContent = name;
+            document.getElementById('modalProductPrice').textContent = price;
+            document.getElementById('modalProductDescription').textContent = description;
+            
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.show();
+        }
+    </script>
+</body>
+</html>

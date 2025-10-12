@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+     Navigation 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -36,6 +37,7 @@
         </div>
     </nav>
 
+     Hero Section 
     <section class="hero">
         <div class="container">
             <div class="row align-items-center">
@@ -67,56 +69,66 @@
         </div>
     </section>
 
+     Categories 
     <section class="categories" id="categories">
         <div class="container">
             <h2 class="section-title">Danh Mục Sản Phẩm</h2>
             <div class="row g-4">
                 <div class="col-md-3 col-sm-6">
-                    <div class="category-card">
-                        <div class="category-icon">📱</div>
-                        <h4>Điện Tử</h4>
-                        <p>2.345 sản phẩm</p>
-                    </div>
+                    <a href="./categories/dien-tu.html" class="text-decoration-none">
+                        <div class="category-card" style="cursor: pointer;">
+                            <div class="category-icon">📱</div>
+                            <h4>Điện Tử</h4>
+                            <p>2.345 sản phẩm</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="category-card">
-                        <div class="category-icon">👕</div>
-                        <h4>Thời Trang</h4>
-                        <p>3.567 sản phẩm</p>
-                    </div>
+                    <a href="./categories/thoi-trang.html" class="text-decoration-none">
+                        <div class="category-card" style="cursor: pointer;">
+                            <div class="category-icon">👕</div>
+                            <h4>Thời Trang</h4>
+                            <p>3.567 sản phẩm</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="category-card">
-                        <div class="category-icon">🏠</div>
-                        <h4>Nhà Cửa & Vườn</h4>
-                        <p>1.890 sản phẩm</p>
-                    </div>
+                    <a href="./categories/nha-cua-vuon.html" class="text-decoration-none">
+                        <div class="category-card" style="cursor: pointer;">
+                            <div class="category-icon">🏠</div>
+                            <h4>Nhà Cửa & Vườn</h4>
+                            <p>1.890 sản phẩm</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="category-card">
-                        <div class="category-icon">⚽</div>
-                        <h4>Thể Thao</h4>
-                        <p>1.234 sản phẩm</p>
-                    </div>
+                    <a href="./categories/the-thao.html" class="text-decoration-none">
+                        <div class="category-card" style="cursor: pointer;">
+                            <div class="category-icon">⚽</div>
+                            <h4>Thể Thao</h4>
+                            <p>1.234 sản phẩm</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+     Products Section 
     <section class="products" id="products">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="section-title mb-0">Sản Phẩm Nổi Bật</h2>
                 <div class="filter-buttons">
-                    <button class="btn btn-sm btn-outline-secondary active">Tất Cả</button>
-                    <button class="btn btn-sm btn-outline-secondary">Mới</button>
-                    <button class="btn btn-sm btn-outline-secondary">Phổ Biến</button>
+                    <button class="btn btn-sm btn-outline-secondary active" data-filter="all">Tất Cả</button>
+                    <button class="btn btn-sm btn-outline-secondary" data-filter="new">Mới</button>
+                    <button class="btn btn-sm btn-outline-secondary" data-filter="popular">Phổ Biến</button>
                 </div>
             </div>
             
-            <div class="row g-4">
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="row g-4" id="productsContainer">
+                 Product Card 1 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
                     <div class="product-card">
                         <div class="product-badge">Nổi Bật</div>
                         <img src="/placeholder.svg?height=250&width=250" alt="Tai Nghe Không Dây" class="product-image">
@@ -131,7 +143,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 2 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
                     <div class="product-card">
                         <img src="/placeholder.svg?height=250&width=250" alt="Đồng Hồ Thông Minh" class="product-image">
                         <div class="product-info">
@@ -145,7 +158,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 3 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Thời Trang">
                     <div class="product-card">
                         <div class="product-badge sale">Giảm Giá</div>
                         <img src="/placeholder.svg?height=250&width=250" alt="Ba Lô Da" class="product-image">
@@ -160,7 +174,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 4 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
                     <div class="product-card">
                         <img src="/placeholder.svg?height=250&width=250" alt="Loa Bluetooth" class="product-image">
                         <div class="product-info">
@@ -174,7 +189,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 5 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
                     <div class="product-card">
                         <img src="/placeholder.svg?height=250&width=250" alt="Bàn Phím Gaming" class="product-image">
                         <div class="product-info">
@@ -188,7 +204,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 6 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Nhà Cửa & Vườn">
                     <div class="product-card">
                         <div class="product-badge">Mới</div>
                         <img src="/placeholder.svg?height=250&width=250" alt="Đèn Bàn" class="product-image">
@@ -203,7 +220,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 7 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Thể Thao">
                     <div class="product-card">
                         <img src="/placeholder.svg?height=250&width=250" alt="Thảm Yoga" class="product-image">
                         <div class="product-info">
@@ -217,7 +235,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                 Product Card 8 
+                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Thể Thao">
                     <div class="product-card">
                         <img src="/placeholder.svg?height=250&width=250" alt="Bình Nước" class="product-image">
                         <div class="product-info">
@@ -234,6 +253,7 @@
         </div>
     </section>
 
+     Product Detail Modal 
     <div class="modal fade" id="productModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -267,6 +287,7 @@
         </div>
     </div>
 
+     Sell Modal 
     <div class="modal fade" id="sellModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -310,6 +331,7 @@
         </div>
     </div>
 
+     Footer 
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -337,7 +359,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="auth.js"></script>
+    <script src="../js/auth.js"></script>
     <script>
         function showProductDetail(name, price, description) {
             // Check if user is logged in before allowing to view/buy
@@ -358,11 +380,12 @@
             modal.show();
         }
 
-        // Filter buttons functionality
         document.querySelectorAll('.filter-buttons .btn').forEach(button => {
             button.addEventListener('click', function() {
                 document.querySelectorAll('.filter-buttons .btn').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
+                
+                // Filter logic can be added here if needed
             });
         });
     </script>
