@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox - GameHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../mainforgames.html">
+                <span class="brand-icon">G</span>
+                GameHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../mainforgames.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Roblox</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-3">Đăng Nhập</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">🎮 Roblox Accounts</h1>
+            <p class="hero-subtitle">Mua acc Roblox chất lượng cao với giá tốt nhất. Hàng ngàn acc đã được bán thành công.</p>
+        </div>
+    </section>
+
+    <!-- Filter & Sort -->
+    <section class="products">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <h2 class="section-title mb-0">Acc Roblox</h2>
+                <div class="filter-buttons">
+                    <button class="btn btn-sm btn-outline-secondary active">Giá Thấp</button>
+                    <button class="btn btn-sm btn-outline-secondary">Giá Cao</button>
+                    <button class="btn btn-sm btn-outline-secondary">Robux Cao</button>
+                    <button class="btn btn-sm btn-outline-secondary">Hot Nhất</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Hot</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox Premium" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Premium Account</h5>
+                            <p class="product-category">Robux: 50K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">550.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Premium Account', '550.000₫', 'Acc Roblox Premium với 50K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 100K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 100K Robux</h5>
+                            <p class="product-category">Robux: 100K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.200.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 100K Robux', '1.200.000₫', 'Acc Roblox kèm 100K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge sale">Giảm Giá</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 20K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 20K Robux</h5>
+                            <p class="product-category">Robux: 20K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">300.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 20K Robux', '300.000₫', 'Acc Roblox kèm 20K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 75K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 75K Robux</h5>
+                            <p class="product-category">Robux: 75K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">950.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 75K Robux', '950.000₫', 'Acc Roblox kèm 75K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Mới</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 35K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 35K Robux</h5>
+                            <p class="product-category">Robux: 35K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">500.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 35K Robux', '500.000₫', 'Acc Roblox kèm 35K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 150K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 150K Robux</h5>
+                            <p class="product-category">Robux: 150K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.800.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 150K Robux', '1.800.000₫', 'Acc Roblox kèm 150K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 60K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 60K Robux</h5>
+                            <p class="product-category">Robux: 60K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">850.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 60K Robux', '850.000₫', 'Acc Roblox kèm 60K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Roblox 10K Robux" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Roblox Acc + 10K Robux</h5>
+                            <p class="product-category">Robux: 10K+</p>
+                            <div class="product-footer">
+                                <span class="product-price">200.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Roblox Acc + 10K Robux', '200.000₫', 'Acc Roblox kèm 10K+ Robux.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductTitle">Chi Tiết Acc</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalProductImage" src="/placeholder.svg" alt="Acc" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductName">Tên Acc</h3>
+                            <p class="text-muted">Roblox</p>
+                            <h2 class="text-primary mb-4" id="modalProductPrice">0₫</h2>
+                            <p id="modalProductDescription">Mô tả acc ở đây.</p>
+                            <div class="d-grid gap-2 mt-4">
+                                <button class="btn btn-primary btn-lg">Mua Ngay</button>
+                                <button class="btn btn-outline-secondary">Liên Hệ Người Bán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>GameHub</h5>
+                    <p>Sàn mua bán acc game uy tín.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên Kết Nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../mainforgames.html">Trang Chủ</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Điều Khoản</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kết Nối</h5>
+                    <p>Theo dõi chúng tôi trên mạng xã hội.</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2025 GameHub.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showProductDetail(name, price, description) {
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductTitle').textContent = name;
+            document.getElementById('modalProductPrice').textContent = price;
+            document.getElementById('modalProductDescription').textContent = description;
+            
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.show();
+        }
+    </script>
+</body>
+</html>

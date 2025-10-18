@@ -249,17 +249,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../auth.js"></script>
     <script>
         function showProductDetail(name, price, description) {
-            if (!auth.isLoggedIn()) {
-                if (confirm('Bạn cần đăng nhập để xem chi tiết sản phẩm. Đăng nhập ngay?')) {
-                    localStorage.setItem('redirectAfterLogin', window.location.href);
-                    window.location.href = 'sign-in.html';
-                }
-                return;
-            }
-
             document.getElementById('modalProductName').textContent = name;
             document.getElementById('modalProductTitle').textContent = name;
             document.getElementById('modalProductPrice').textContent = price;

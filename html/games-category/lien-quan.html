@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Quân - GameHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../mainforgames.html">
+                <span class="brand-icon">G</span>
+                GameHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../mainforgames.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Liên Quân</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-3">Đăng Nhập</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">⚔️ Liên Quân Mobile Accounts</h1>
+            <p class="hero-subtitle">Mua acc Liên Quân chất lượng cao với giá tốt nhất. Hàng ngàn acc đã được bán thành công.</p>
+        </div>
+    </section>
+
+    <!-- Filter & Sort -->
+    <section class="products">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <h2 class="section-title mb-0">Acc Liên Quân</h2>
+                <div class="filter-buttons">
+                    <button class="btn btn-sm btn-outline-secondary active">Giá Thấp</button>
+                    <button class="btn btn-sm btn-outline-secondary">Giá Cao</button>
+                    <button class="btn btn-sm btn-outline-secondary">Rank Cao</button>
+                    <button class="btn btn-sm btn-outline-secondary">Hot Nhất</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Hot</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Vàng" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Vàng</h5>
+                            <p class="product-category">Tướng: 50+</p>
+                            <div class="product-footer">
+                                <span class="product-price">750.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Vàng', '750.000₫', 'Acc rank Vàng với 50+ tướng, skin hiếm.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Kim Cương" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Kim Cương</h5>
+                            <p class="product-category">Tướng: 80+</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.200.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Kim Cương', '1.200.000₫', 'Acc rank Kim Cương với 80+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge sale">Giảm Giá</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Bạc" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Bạc</h5>
+                            <p class="product-category">Tướng: 30+</p>
+                            <div class="product-footer">
+                                <span class="product-price">450.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Bạc', '450.000₫', 'Acc rank Bạc với 30+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Thạch Đấu" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Thạch Đấu</h5>
+                            <p class="product-category">Tướng: 100+</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.800.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Thạch Đấu', '1.800.000₫', 'Acc rank Thạch Đấu với 100+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Mới</div>
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Vàng 2" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Vàng 2</h5>
+                            <p class="product-category">Tướng: 60+</p>
+                            <div class="product-footer">
+                                <span class="product-price">900.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Vàng 2', '900.000₫', 'Acc rank Vàng 2 với 60+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Kim Cương 2" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Kim Cương 2</h5>
+                            <p class="product-category">Tướng: 90+</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.500.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Kim Cương 2', '1.500.000₫', 'Acc rank Kim Cương 2 với 90+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Vàng 3" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Vàng 3</h5>
+                            <p class="product-category">Tướng: 55+</p>
+                            <div class="product-footer">
+                                <span class="product-price">850.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Vàng 3', '850.000₫', 'Acc rank Vàng 3 với 55+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Bạc 2" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Bạc 2</h5>
+                            <p class="product-category">Tướng: 40+</p>
+                            <div class="product-footer">
+                                <span class="product-price">550.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Bạc 2', '550.000₫', 'Acc rank Bạc 2 với 40+ tướng.')">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProductTitle">Chi Tiết Acc</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalProductImage" src="/placeholder.svg" alt="Acc" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductName">Tên Acc</h3>
+                            <p class="text-muted">Liên Quân</p>
+                            <h2 class="text-primary mb-4" id="modalProductPrice">0₫</h2>
+                            <p id="modalProductDescription">Mô tả acc ở đây.</p>
+                            <div class="d-grid gap-2 mt-4">
+                                <button class="btn btn-primary btn-lg">Mua Ngay</button>
+                                <button class="btn btn-outline-secondary">Liên Hệ Người Bán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>GameHub</h5>
+                    <p>Sàn mua bán acc game uy tín.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên Kết Nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../mainforgames.html">Trang Chủ</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="#">Điều Khoản</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kết Nối</h5>
+                    <p>Theo dõi chúng tôi trên mạng xã hội.</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2025 GameHub.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showProductDetail(name, price, description) {
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductTitle').textContent = name;
+            document.getElementById('modalProductPrice').textContent = price;
+            document.getElementById('modalProductDescription').textContent = description;
+            
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.show();
+        }
+    </script>
+</body>
+</html>
