@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên Quân - GameHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -57,120 +57,99 @@
 
             <!-- Product Grid -->
             <div class="row g-4">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-badge">Hot</div>
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Vàng" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Vàng</h5>
-                            <p class="product-category">Tướng: 50+</p>
-                            <div class="product-footer">
-                                <span class="product-price">750.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Vàng', '750.000₫', 'Acc rank Vàng với 50+ tướng, skin hiếm.')">Xem</button>
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image-container" id="mainImageContainer">
+                            <img id="mainImage" src="/placeholder.svg?height=500&width=500" alt="Product" class="main-image" draggable="true">
+                            <div class="image-nav-arrow left" onclick="previousImage()">❮</div>
+                            <div class="image-nav-arrow right" onclick="nextImage()">❯</div>
+                        </div>
+                        
+                        <div class="thumbnail-container">
+                            <div class="thumbnail-scroll" id="thumbnailScroll">
+                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail active" onclick="selectThumbnail(this, 0)">
+                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 1)">
+                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 2)">
+                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 3)">
+                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 4)">
                             </div>
+                            <button class="thumbnail-nav-btn right" onclick="scrollThumbnails('right')">›</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Kim Cương" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Kim Cương</h5>
-                            <p class="product-category">Tướng: 80+</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.200.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Kim Cương', '1.200.000₫', 'Acc rank Kim Cương với 80+ tướng.')">Xem</button>
+                <div class="col-lg-6">
+                    <div class="product-detail-info">
+                        <div class="product-header-info">
+                            <div class="info-badge">
+                                <strong>MÃ SỐ:</strong> <span id="productId">288790</span>
+                            </div>
+                            <div class="info-badge">
+                                <strong>MỤC:</strong> <span id="productCategory">ACC LIÊN QUÂN</span>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-badge sale">Giảm Giá</div>
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Bạc" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Bạc</h5>
-                            <p class="product-category">Tướng: 30+</p>
-                            <div class="product-footer">
-                                <span class="product-price">450.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Bạc', '450.000₫', 'Acc rank Bạc với 30+ tướng.')">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <h2 id="productTitle" class="product-detail-title">Liên Quân Rank Vàng</h2>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Thạch Đấu" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Thạch Đấu</h5>
-                            <p class="product-category">Tướng: 100+</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.800.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Thạch Đấu', '1.800.000₫', 'Acc rank Thạch Đấu với 100+ tướng.')">Xem</button>
+                        <div class="price-section">
+                            <div class="price-item">
+                                <span class="price-label">Giá</span>
+                                <span class="price-value" id="productPrice">750.000₫</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">ATM/MOMO chỉ cần</span>
+                                <span class="price-value payment-price" id="paymentPrice">675.000₫</span>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-badge">Mới</div>
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Vàng 2" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Vàng 2</h5>
-                            <p class="product-category">Tướng: 60+</p>
-                            <div class="product-footer">
-                                <span class="product-price">900.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Vàng 2', '900.000₫', 'Acc rank Vàng 2 với 60+ tướng.')">Xem</button>
+                        <div class="details-section">
+                            <div class="detail-item">
+                                <span class="detail-label">▸ Rank</span>
+                                <span class="detail-value" id="productRank">Vàng</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">▸ Ghi chú</span>
+                                <span class="detail-value" id="productDescription">Acc rank Vàng với 50+ tướng, skin hiếm.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">▸ Liên hệ</span>
+                                <span class="detail-value" id="productContact">Zalo:0971882507</span>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Kim Cương 2" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Kim Cương 2</h5>
-                            <p class="product-category">Tướng: 90+</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.500.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Kim Cương 2', '1.500.000₫', 'Acc rank Kim Cương 2 với 90+ tướng.')">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <button class="btn btn-danger btn-lg w-100 mt-4 mb-3">
+                            🛒 MUA NGAY
+                        </button>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Vàng 3" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Vàng 3</h5>
-                            <p class="product-category">Tướng: 55+</p>
-                            <div class="product-footer">
-                                <span class="product-price">850.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Vàng 3', '850.000₫', 'Acc rank Vàng 3 với 55+ tướng.')">Xem</button>
-                            </div>
+                        <div class="payment-info">
+                            <p class="mb-2"><strong>NAP QUA ATM/MOMO</strong></p>
+                            <a href="#" class="view-link">XEM TẠI ĐÂY →</a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Liên Quân Bạc 2" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Liên Quân Rank Bạc 2</h5>
-                            <p class="product-category">Tướng: 40+</p>
-                            <div class="product-footer">
-                                <span class="product-price">550.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Liên Quân Rank Bạc 2', '550.000₫', 'Acc rank Bạc 2 với 40+ tướng.')">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Pagination -->
+            <div class="pagination-container mt-5">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </section>
