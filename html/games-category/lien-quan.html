@@ -55,75 +55,119 @@
                 </div>
             </div>
 
-            <!-- Product Grid -->
+            <!-- Product Grid with 8 items per page -->
             <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="product-gallery">
-                        <div class="main-image-container" id="mainImageContainer">
-                            <img id="mainImage" src="/placeholder.svg?height=500&width=500" alt="Product" class="main-image" draggable="true">
-                            <div class="image-nav-arrow left" onclick="previousImage()">❮</div>
-                            <div class="image-nav-arrow right" onclick="nextImage()">❯</div>
-                        </div>
-                        
-                        <div class="thumbnail-container">
-                            <div class="thumbnail-scroll" id="thumbnailScroll">
-                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail active" onclick="selectThumbnail(this, 0)">
-                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 1)">
-                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 2)">
-                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 3)">
-                                <img src="/placeholder.svg?height=80&width=80" class="thumbnail" onclick="selectThumbnail(this, 4)">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Hot</div>
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=250&h=250&fit=crop" alt="Liên Quân Acc" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Vàng</h5>
+                            <p class="product-category">50+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">750.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288800', name: 'Liên Quân Rank Vàng', category: 'ACC LIÊN QUÂN', price: '750.000₫', paymentPrice: '675.000₫', rank: 'Vàng', description: 'Acc rank Vàng với 50+ tướng, skin hiếm.', contact: 'Zalo:0971882507'})">Xem</button>
                             </div>
-                            <button class="thumbnail-nav-btn right" onclick="scrollThumbnails('right')">›</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="product-detail-info">
-                        <div class="product-header-info">
-                            <div class="info-badge">
-                                <strong>MÃ SỐ:</strong> <span id="productId">288790</span>
-                            </div>
-                            <div class="info-badge">
-                                <strong>MỤC:</strong> <span id="productCategory">ACC LIÊN QUÂN</span>
-                            </div>
-                        </div>
-
-                        <h2 id="productTitle" class="product-detail-title">Liên Quân Rank Vàng</h2>
-
-                        <div class="price-section">
-                            <div class="price-item">
-                                <span class="price-label">Giá</span>
-                                <span class="price-value" id="productPrice">750.000₫</span>
-                            </div>
-                            <div class="price-item">
-                                <span class="price-label">ATM/MOMO chỉ cần</span>
-                                <span class="price-value payment-price" id="paymentPrice">675.000₫</span>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=250&h=250&fit=crop" alt="Liên Quân Elite" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Bạc</h5>
+                            <p class="product-category">30+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">450.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288801', name: 'Liên Quân Rank Bạc', category: 'ACC LIÊN QUÂN', price: '450.000₫', paymentPrice: '405.000₫', rank: 'Bạc', description: 'Acc rank Bạc với 30+ tướng.', contact: 'Zalo:0971882507'})">Xem</button>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="details-section">
-                            <div class="detail-item">
-                                <span class="detail-label">▸ Rank</span>
-                                <span class="detail-value" id="productRank">Vàng</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">▸ Ghi chú</span>
-                                <span class="detail-value" id="productDescription">Acc rank Vàng với 50+ tướng, skin hiếm.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">▸ Liên hệ</span>
-                                <span class="detail-value" id="productContact">Zalo:0971882507</span>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge sale">Giảm Giá</div>
+                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=250&h=250&fit=crop" alt="Liên Quân Đồng" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Rank Đồng</h5>
+                            <p class="product-category">15+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">250.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288802', name: 'Liên Quân Rank Đồng', category: 'ACC LIÊN QUÂN', price: '250.000₫', paymentPrice: '225.000₫', rank: 'Đồng', description: 'Acc rank Đồng với 15+ tướng.', contact: 'Zalo:0971882507'})">Xem</button>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <button class="btn btn-danger btn-lg w-100 mt-4 mb-3">
-                            🛒 MUA NGAY
-                        </button>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=250&h=250&fit=crop" alt="Liên Quân Cao Thủ" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Cao Thủ</h5>
+                            <p class="product-category">80+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">1.200.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288803', name: 'Liên Quân Cao Thủ', category: 'ACC LIÊN QUÂN', price: '1.200.000₫', paymentPrice: '1.080.000₫', rank: 'Cao Thủ', description: 'Acc rank Cao Thủ với 80+ tướng, skin full.', contact: 'Zalo:0971882507'})">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="payment-info">
-                            <p class="mb-2"><strong>NAP QUA ATM/MOMO</strong></p>
-                            <a href="#" class="view-link">XEM TẠI ĐÂY →</a>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-badge">Mới</div>
+                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=250&h=250&fit=crop" alt="Liên Quân Thách Đấu" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Thách Đấu</h5>
+                            <p class="product-category">60+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">900.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288804', name: 'Liên Quân Thách Đấu', category: 'ACC LIÊN QUÂN', price: '900.000₫', paymentPrice: '810.000₫', rank: 'Thách Đấu', description: 'Acc rank Thách Đấu với 60+ tướng.', contact: 'Zalo:0971882507'})">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=250&h=250&fit=crop" alt="Liên Quân Vàng+" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Vàng+</h5>
+                            <p class="product-category">55+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">850.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288805', name: 'Liên Quân Vàng+', category: 'ACC LIÊN QUÂN', price: '850.000₫', paymentPrice: '765.000₫', rank: 'Vàng+', description: 'Acc rank Vàng+ với 55+ tướng.', contact: 'Zalo:0971882507'})">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=250&h=250&fit=crop" alt="Liên Quân Bạc+" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Bạc+</h5>
+                            <p class="product-category">40+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">550.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288806', name: 'Liên Quân Bạc+', category: 'ACC LIÊN QUÂN', price: '550.000₫', paymentPrice: '495.000₫', rank: 'Bạc+', description: 'Acc rank Bạc+ với 40+ tướng.', contact: 'Zalo:0971882507'})">Xem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=250&h=250&fit=crop" alt="Liên Quân Đồng+" class="product-image">
+                        <div class="product-info">
+                            <h5 class="product-title">Liên Quân Đồng+</h5>
+                            <p class="product-category">25+ Tướng</p>
+                            <div class="product-footer">
+                                <span class="product-price">350.000₫</span>
+                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288807', name: 'Liên Quân Đồng+', category: 'ACC LIÊN QUÂN', price: '350.000₫', paymentPrice: '315.000₫', rank: 'Đồng+', description: 'Acc rank Đồng+ với 25+ tướng.', contact: 'Zalo:0971882507'})">Xem</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,18 +176,18 @@
             <!-- Pagination -->
             <div class="pagination-container mt-5">
                 <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
+                    <ul class="pagination justify-content-center" id="paginationNav">
+                        <li class="page-item" id="prevBtn">
                             <a class="page-link" href="#" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item">
+                        <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-page="5">5</a></li>
+                        <li class="page-item" id="nextBtn">
                             <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
@@ -156,25 +200,82 @@
 
     <!-- Product Detail Modal -->
     <div class="modal fade" id="productModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalProductTitle">Chi Tiết Acc</h5>
+                    <h5 class="modal-title">Chi Tiết Sản Phẩm</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <img id="modalProductImage" src="/placeholder.svg" alt="Acc" class="img-fluid rounded">
+                        <div class="col-lg-6">
+                            <div class="product-gallery">
+                                <div class="main-image-container" id="mainImageContainer">
+                                    <img id="mainImage" src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=500&h=500&fit=crop" alt="Product" class="main-image" draggable="true">
+                                    <div class="image-nav-arrow left" onclick="previousImage()">❮</div>
+                                    <div class="image-nav-arrow right" onclick="nextImage()">❯</div>
+                                </div>
+                                
+                                <div class="thumbnail-container">
+                                    <div class="thumbnail-scroll" id="thumbnailScroll">
+                                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=80&h=80&fit=crop" class="thumbnail active" onclick="selectThumbnail(this, 0)" alt="Liên Quân Screenshot 1">
+                                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 1)" alt="Liên Quân Screenshot 2">
+                                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 2)" alt="Liên Quân Screenshot 3">
+                                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 3)" alt="Liên Quân Screenshot 4">
+                                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 4)" alt="Liên Quân Screenshot 5">
+                                    </div>
+                                    <button class="thumbnail-nav-btn right" onclick="scrollThumbnails('right')">›</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <h3 id="modalProductName">Tên Acc</h3>
-                            <p class="text-muted">Liên Quân</p>
-                            <h2 class="text-primary mb-4" id="modalProductPrice">0₫</h2>
-                            <p id="modalProductDescription">Mô tả acc ở đây.</p>
-                            <div class="d-grid gap-2 mt-4">
-                                <button class="btn btn-primary btn-lg">Mua Ngay</button>
-                                <button class="btn btn-outline-secondary">Liên Hệ Người Bán</button>
+
+                        <div class="col-lg-6">
+                            <div class="product-detail-info">
+                                <div class="product-header-info">
+                                    <div class="info-badge">
+                                        <strong>MÃ SỐ:</strong> <span id="productId">288800</span>
+                                    </div>
+                                    <div class="info-badge">
+                                        <strong>MỤC:</strong> <span id="productCategory">ACC LIÊN QUÂN</span>
+                                    </div>
+                                </div>
+
+                                <h2 id="productTitle" class="product-detail-title">Liên Quân Rank Vàng</h2>
+
+                                <div class="price-section">
+                                    <div class="price-item">
+                                        <span class="price-label">Giá</span>
+                                        <span class="price-value" id="productPrice">750.000₫</span>
+                                    </div>
+                                    <div class="price-item">
+                                        <span class="price-label">ATM/MOMO chỉ cần</span>
+                                        <span class="price-value payment-price" id="paymentPrice">675.000₫</span>
+                                    </div>
+                                </div>
+
+                                <div class="details-section">
+                                    <div class="detail-item">
+                                        <span class="detail-label">▸ Rank</span>
+                                        <span class="detail-value" id="productRank">Vàng</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">▸ Ghi chú</span>
+                                        <span class="detail-value" id="productDescription">Acc rank Vàng với 50+ tướng, skin hiếm.</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">▸ Liên hệ</span>
+                                        <span class="detail-value" id="productContact">Zalo:0971882507</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-danger btn-lg w-100 mt-4 mb-3">
+                                    🛒 MUA NGAY
+                                </button>
+
+                                <div class="payment-info">
+                                    <p class="mb-2"><strong>NAP QUA ATM/MOMO</strong></p>
+                                    <a href="#" class="view-link">XEM TẠI ĐÂY →</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -211,15 +312,127 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function showProductDetail(name, price, description) {
-            document.getElementById('modalProductName').textContent = name;
-            document.getElementById('modalProductTitle').textContent = name;
-            document.getElementById('modalProductPrice').textContent = price;
-            document.getElementById('modalProductDescription').textContent = description;
+        let currentImageIndex = 0;
+        let dragStartX = 0;
+        let isDragging = false;
+        let currentPage = 1;
+        const productsPerPage = 8;
+
+        function initPagination() {
+            const productCards = document.querySelectorAll('.row.g-4 > .col-lg-3');
+            const totalPages = Math.ceil(productCards.length / productsPerPage);
+            
+            function showPage(page) {
+                currentPage = page;
+                productCards.forEach((card, index) => {
+                    const pageNum = Math.floor(index / productsPerPage) + 1;
+                    card.style.display = pageNum === page ? 'block' : 'none';
+                });
+                
+                document.querySelectorAll('.pagination .page-link[data-page]').forEach(btn => {
+                    btn.parentElement.classList.remove('active');
+                    if (parseInt(btn.dataset.page) === page) {
+                        btn.parentElement.classList.add('active');
+                    }
+                });
+                
+                document.getElementById('prevBtn').classList.toggle('disabled', page === 1);
+                document.getElementById('nextBtn').classList.toggle('disabled', page === totalPages);
+            }
+            
+            document.querySelectorAll('.pagination .page-link[data-page]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showPage(parseInt(btn.dataset.page));
+                });
+            });
+            
+            document.getElementById('prevBtn').querySelector('.page-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                if (currentPage > 1) showPage(currentPage - 1);
+            });
+            
+            document.getElementById('nextBtn').querySelector('.page-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                if (currentPage < totalPages) showPage(currentPage + 1);
+            });
+            
+            showPage(1);
+        }
+
+        function showProductDetail(product) {
+            document.getElementById('productId').textContent = product.id;
+            document.getElementById('productTitle').textContent = product.name;
+            document.getElementById('productCategory').textContent = product.category;
+            document.getElementById('productPrice').textContent = product.price;
+            document.getElementById('paymentPrice').textContent = product.paymentPrice;
+            document.getElementById('productRank').textContent = product.rank;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('productContact').textContent = product.contact;
+            
+            currentImageIndex = 0;
+            updateMainImage();
             
             const modal = new bootstrap.Modal(document.getElementById('productModal'));
             modal.show();
         }
+
+        function selectThumbnail(element, index) {
+            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+            currentImageIndex = index;
+            updateMainImage();
+        }
+
+        function nextImage() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
+            document.querySelectorAll('.thumbnail')[currentImageIndex].click();
+        }
+
+        function previousImage() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
+            document.querySelectorAll('.thumbnail')[currentImageIndex].click();
+        }
+
+        function updateMainImage() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            document.getElementById('mainImage').src = thumbnails[currentImageIndex].src;
+        }
+
+        function scrollThumbnails(direction) {
+            const container = document.getElementById('thumbnailScroll');
+            const scrollAmount = 100;
+            if (direction === 'right') {
+                container.scrollLeft += scrollAmount;
+            }
+        }
+
+        const mainImageContainer = document.getElementById('mainImageContainer');
+        const mainImage = document.getElementById('mainImage');
+
+        mainImage.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            dragStartX = e.clientX;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const dragDistance = e.clientX - dragStartX;
+            if (dragDistance > 50) {
+                previousImage();
+                isDragging = false;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initPagination();
+        });
     </script>
 </body>
 </html>
