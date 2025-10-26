@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketHub - Sàn Mua Bán Trực Tuyến</title>
+    <title>MarketHub - Sàn Giao Dịch Trực Tuyến</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-     Navigation 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <span class="brand-icon">M</span>
                 MarketHub
             </a>
@@ -21,47 +20,64 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#products">Sản Phẩm</a>
+                        <a class="nav-link active" href="index.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Sản Phẩm</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#categories">Danh Mục</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sell.html">Bán Hàng</a>
+                        <a class="nav-link" href="categories/sell.html">Bán Hàng</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary ms-3">Đăng Nhập</button>
+                        <a class="nav-link" href="indexforgames.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-3" onclick="window.location.href='authenticator/sign-in.html'">Đăng Nhập</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-     Hero Section 
     <section class="hero">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="hero-title">Sàn Giao Dịch Hàng Đầu</h1>
-                    <p class="hero-subtitle">Mua bán sản phẩm chất lượng với sự tin cậy. Tham gia cùng hàng nghìn khách hàng hài lòng.</p>
-                    <div class="hero-actions">
-                        <a href="sell.html" class="btn btn-primary btn-lg">Bắt Đầu Bán</a>
-                        <a href="#products" class="btn btn-outline-light btn-lg ms-3">Xem Sản Phẩm</a>
+                    <h1 class="hero-title">Chào Mừng Đến Với MarketHub</h1>
+                    <p class="hero-subtitle">Nơi mua bán trực tuyến đáng tin cậy với hàng nghìn sản phẩm chất lượng</p>
+                    <div class="mt-4">
+                        <a href="#products" class="btn btn-primary btn-lg me-3">Khám Phá Ngay</a>
+                        <a href="categories/sell.html" class="btn btn-outline-light btn-lg">Bán Hàng</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <h3>10K+</h3>
-                            <p>Sản Phẩm</p>
+                    <div class="row g-3 mt-4">
+                        <div class="col-6">
+                            <div class="stat-card">
+                                <h3>10,000+</h3>
+                                <p>Sản Phẩm</p>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <h3>5K+</h3>
-                            <p>Người Bán</p>
+                        <div class="col-6">
+                            <div class="stat-card">
+                                <h3>50,000+</h3>
+                                <p>Người Dùng</p>
+                            </div>
                         </div>
-                        <div class="stat-card">
-                            <h3>50K+</h3>
-                            <p>Giao Dịch</p>
+                        <div class="col-6">
+                            <div class="stat-card">
+                                <h3>100%</h3>
+                                <p>An Toàn</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-card">
+                                <h3>24/7</h3>
+                                <p>Hỗ Trợ</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,44 +85,43 @@
         </div>
     </section>
 
-     Categories 
-    <section class="categories" id="categories">
+    <section id="categories" class="py-5">
         <div class="container">
-            <h2 class="section-title">Danh Mục Sản Phẩm</h2>
+            <h2 class="text-center text-white mb-5">Danh Mục Sản Phẩm</h2>
             <div class="row g-4">
                 <div class="col-md-3 col-sm-6">
-                    <a href="dien-tu.html" class="text-decoration-none">
-                        <div class="category-card" style="cursor: pointer;">
-                            <div class="category-icon">📱</div>
-                            <h4>Điện Tử</h4>
-                            <p>2.345 sản phẩm</p>
+                    <a href="categories/dien-tu.html" class="category-card text-decoration-none">
+                        <div class="text-center">
+                            <div class="category-icon mb-3">📱</div>
+                            <h5 class="text-white">Điện Tử</h5>
+                            <p class="text-muted mb-0">Điện thoại, laptop, máy tính bảng</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a href="thoi-trang.html" class="text-decoration-none">
-                        <div class="category-card" style="cursor: pointer;">
-                            <div class="category-icon">👕</div>
-                            <h4>Thời Trang</h4>
-                            <p>3.567 sản phẩm</p>
+                    <a href="categories/thoi-trang.html" class="category-card text-decoration-none">
+                        <div class="text-center">
+                            <div class="category-icon mb-3">👗</div>
+                            <h5 class="text-white">Thời Trang</h5>
+                            <p class="text-muted mb-0">Quần áo, giày dép, phụ kiện</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a href="nha-cua-vuon.html" class="text-decoration-none">
-                        <div class="category-card" style="cursor: pointer;">
-                            <div class="category-icon">🏠</div>
-                            <h4>Nhà Cửa & Vườn</h4>
-                            <p>1.890 sản phẩm</p>
+                    <a href="categories/nha-cua-vuon.html" class="category-card text-decoration-none">
+                        <div class="text-center">
+                            <div class="category-icon mb-3">🏡</div>
+                            <h5 class="text-white">Nhà Cửa & Vườn</h5>
+                            <p class="text-muted mb-0">Nội thất, đồ trang trí, cây cảnh</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a href="the-thao.html" class="text-decoration-none">
-                        <div class="category-card" style="cursor: pointer;">
-                            <div class="category-icon">⚽</div>
-                            <h4>Thể Thao</h4>
-                            <p>1.234 sản phẩm</p>
+                    <a href="categories/the-thao.html" class="category-card text-decoration-none">
+                        <div class="text-center">
+                            <div class="category-icon mb-3">⚽</div>
+                            <h5 class="text-white">Thể Thao</h5>
+                            <p class="text-muted mb-0">Dụng cụ thể thao, trang phục</p>
                         </div>
                     </a>
                 </div>
@@ -114,137 +129,87 @@
         </div>
     </section>
 
-     Products Section 
-    <section class="products" id="products">
+    <section id="products" class="py-5">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="section-title mb-0">Sản Phẩm Nổi Bật</h2>
-                <div class="filter-buttons">
-                    <button class="btn btn-sm btn-outline-secondary active" data-filter="all">Tất Cả</button>
-                    <button class="btn btn-sm btn-outline-secondary" data-filter="new">Mới</button>
-                    <button class="btn btn-sm btn-outline-secondary" data-filter="popular">Phổ Biến</button>
-                </div>
-            </div>
-            
-            <div class="row g-4" id="productsContainer">
-                 Product Card 1 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
+            <h2 class="text-center text-white mb-5">Sản Phẩm Nổi Bật</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-card">
-                        <div class="product-badge">Nổi Bật</div>
-                        <img src="/placeholder.svg?height=250&width=250" alt="Tai Nghe Không Dây" class="product-image">
+                        <div class="product-badge">Hot</div>
+                        <img src="https://via.placeholder.com/300x200" alt="Product" class="product-image">
                         <div class="product-info">
-                            <h5 class="product-title">Tai Nghe Không Dây Cao Cấp</h5>
-                            <p class="product-category">Điện Tử</p>
-                            <div class="product-footer">
-                                <span class="product-price">7.500.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Tai Nghe Không Dây Cao Cấp', '7.500.000₫', 'Tai nghe không dây chất lượng cao với chống ồn và pin 30 giờ.')">Xem</button>
+                            <h5>iPhone 15 Pro Max</h5>
+                            <p class="text-muted">Điện thoại cao cấp mới nhất</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">29,990,000₫</span>
+                                <button class="btn btn-sm btn-primary">Chi Tiết</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                 Product Card 2 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Đồng Hồ Thông Minh" class="product-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Product" class="product-image">
                         <div class="product-info">
-                            <h5 class="product-title">Đồng Hồ Thể Thao Thông Minh</h5>
-                            <p class="product-category">Điện Tử</p>
-                            <div class="product-footer">
-                                <span class="product-price">5.000.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Đồng Hồ Thể Thao Thông Minh', '5.000.000₫', 'Theo dõi sức khỏe với đồng hồ thông minh có tính năng đo nhịp tim và GPS.')">Xem</button>
+                            <h5>MacBook Pro M3</h5>
+                            <p class="text-muted">Laptop hiệu năng cao</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">45,990,000₫</span>
+                                <button class="btn btn-sm btn-primary">Chi Tiết</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                 Product Card 3 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Thời Trang">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-card">
-                        <div class="product-badge sale">Giảm Giá</div>
-                        <img src="/placeholder.svg?height=250&width=250" alt="Ba Lô Da" class="product-image">
+                        <div class="product-badge">Sale</div>
+                        <img src="https://via.placeholder.com/300x200" alt="Product" class="product-image">
                         <div class="product-info">
-                            <h5 class="product-title">Ba Lô Da Thiết Kế</h5>
-                            <p class="product-category">Thời Trang</p>
-                            <div class="product-footer">
-                                <span class="product-price">3.750.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Ba Lô Da Thiết Kế', '3.750.000₫', 'Ba lô da phong cách và bền bỉ, hoàn hảo cho công việc hoặc du lịch.')">Xem</button>
+                            <h5>AirPods Pro</h5>
+                            <p class="text-muted">Tai nghe không dây chống ồn</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">5,990,000₫</span>
+                                <button class="btn btn-sm btn-primary">Chi Tiết</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                 Product Card 4 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Loa Bluetooth" class="product-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Product" class="product-image">
                         <div class="product-info">
-                            <h5 class="product-title">Loa Bluetooth Di Động</h5>
-                            <p class="product-category">Điện Tử</p>
-                            <div class="product-footer">
-                                <span class="product-price">2.000.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Loa Bluetooth Di Động', '2.000.000₫', 'Loa chống nước với âm thanh 360 độ và pin 12 giờ.')">Xem</button>
+                            <h5>Samsung Galaxy S24</h5>
+                            <p class="text-muted">Smartphone Android flagship</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">22,990,000₫</span>
+                                <button class="btn btn-sm btn-primary">Chi Tiết</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                 Product Card 5 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Điện Tử">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Bàn Phím Gaming" class="product-image">
+                        <div class="product-badge">New</div>
+                        <img src="https://via.placeholder.com/300x200" alt="Product" class="product-image">
                         <div class="product-info">
-                            <h5 class="product-title">Bàn Phím Cơ Gaming</h5>
-                            <p class="product-category">Điện Tử</p>
-                            <div class="product-footer">
-                                <span class="product-price">3.250.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Bàn Phím Cơ Gaming', '3.250.000₫', 'Bàn phím cơ có đèn RGB với phím tùy chỉnh và hỗ trợ macro.')">Xem</button>
+                            <h5>iPad Pro 2024</h5>
+                            <p class="text-muted">Máy tính bảng cao cấp</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">28,990,000₫</span>
+                                <button class="btn btn-sm btn-primary">Chi Tiết</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                 Product Card 6 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Nhà Cửa & Vườn">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-card">
-                        <div class="product-badge">Mới</div>
-                        <img src="/placeholder.svg?height=250&width=250" alt="Đèn Bàn" class="product-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Product" class="product-image">
                         <div class="product-info">
-                            <h5 class="product-title">Đèn Bàn LED Hiện Đại</h5>
-                            <p class="product-category">Nhà Cửa & Vườn</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.500.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Đèn Bàn LED Hiện Đại', '1.500.000₫', 'Đèn LED có thể điều chỉnh với điều khiển cảm ứng và nhiều mức độ sáng.')">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 Product Card 7 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Thể Thao">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Thảm Yoga" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Thảm Yoga Cao Cấp</h5>
-                            <p class="product-category">Thể Thao</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.000.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Thảm Yoga Cao Cấp', '1.000.000₫', 'Thảm yoga chống trượt với đệm êm ái cho sự thoải mái khi tập luyện.')">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 Product Card 8 
-                <div class="col-lg-3 col-md-4 col-sm-6 product-item" data-category="Thể Thao">
-                    <div class="product-card">
-                        <img src="/placeholder.svg?height=250&width=250" alt="Bình Nước" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Bình Nước Giữ Nhiệt</h5>
-                            <p class="product-category">Thể Thao</p>
-                            <div class="product-footer">
-                                <span class="product-price">750.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail('Bình Nước Giữ Nhiệt', '750.000₫', 'Giữ đồ uống lạnh 24 giờ hoặc nóng 12 giờ với bình cao cấp này.')">Xem</button>
+                            <h5>Apple Watch Ultra 2</h5>
+                            <p class="text-muted">Đồng hồ thông minh cao cấp</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">20,990,000₫</span>
+                                <button class="btn btn-sm btn-primary">Chi Tiết</button>
                             </div>
                         </div>
                     </div>
@@ -253,191 +218,6 @@
         </div>
     </section>
 
-     Flash Sale 24h 
-    <section class="flash-sale" id="flash-sale">
-        <div class="container">
-            <div class="flash-sale-header">
-                <div class="flash-sale-title">
-                    <span class="flash-icon">⚡</span>
-                    <h2>Flash Sale 24h</h2>
-                </div>
-                <div class="countdown-timer">
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="hours">00</span>
-                        <span class="countdown-label">Giờ</span>
-                    </div>
-                    <span class="countdown-separator">:</span>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="minutes">00</span>
-                        <span class="countdown-label">Phút</span>
-                    </div>
-                    <span class="countdown-separator">:</span>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="seconds">00</span>
-                        <span class="countdown-label">Giây</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flash-sale-products">
-                <div class="flash-product-card">
-                    <div class="flash-discount">-40%</div>
-                    <img src="/placeholder.svg?height=200&width=200" alt="Tai Nghe Không Dây" class="flash-product-image">
-                    <div class="flash-product-info">
-                        <h5>Tai Nghe Không Dây Premium</h5>
-                        <div class="flash-price-section">
-                            <span class="flash-original-price">12.500.000₫</span>
-                            <span class="flash-sale-price">7.500.000₫</span>
-                        </div>
-                        <div class="flash-stock">
-                            <div class="stock-bar">
-                                <div class="stock-fill" style="width: 75%;"></div>
-                            </div>
-                            <span class="stock-text">Còn 45/60 sản phẩm</span>
-                        </div>
-                        <button class="btn btn-danger btn-sm w-100 mt-2">Mua Ngay</button>
-                    </div>
-                </div>
-
-                <div class="flash-product-card">
-                    <div class="flash-discount">-35%</div>
-                    <img src="/placeholder.svg?height=200&width=200" alt="Đồng Hồ Thông Minh" class="flash-product-image">
-                    <div class="flash-product-info">
-                        <h5>Đồng Hồ Thông Minh Pro</h5>
-                        <div class="flash-price-section">
-                            <span class="flash-original-price">8.000.000₫</span>
-                            <span class="flash-sale-price">5.200.000₫</span>
-                        </div>
-                        <div class="flash-stock">
-                            <div class="stock-bar">
-                                <div class="stock-fill" style="width: 60%;"></div>
-                            </div>
-                            <span class="stock-text">Còn 30/50 sản phẩm</span>
-                        </div>
-                        <button class="btn btn-danger btn-sm w-100 mt-2">Mua Ngay</button>
-                    </div>
-                </div>
-
-                <div class="flash-product-card">
-                    <div class="flash-discount">-50%</div>
-                    <img src="/placeholder.svg?height=200&width=200" alt="Loa Bluetooth" class="flash-product-image">
-                    <div class="flash-product-info">
-                        <h5>Loa Bluetooth Cao Cấp</h5>
-                        <div class="flash-price-section">
-                            <span class="flash-original-price">4.000.000₫</span>
-                            <span class="flash-sale-price">2.000.000₫</span>
-                        </div>
-                        <div class="flash-stock">
-                            <div class="stock-bar">
-                                <div class="stock-fill" style="width: 90%;"></div>
-                            </div>
-                            <span class="stock-text">Còn 18/20 sản phẩm</span>
-                        </div>
-                        <button class="btn btn-danger btn-sm w-100 mt-2">Mua Ngay</button>
-                    </div>
-                </div>
-
-                <div class="flash-product-card">
-                    <div class="flash-discount">-30%</div>
-                    <img src="/placeholder.svg?height=200&width=200" alt="Bàn Phím Gaming" class="flash-product-image">
-                    <div class="flash-product-info">
-                        <h5>Bàn Phím Gaming RGB</h5>
-                        <div class="flash-price-section">
-                            <span class="flash-original-price">5.000.000₫</span>
-                            <span class="flash-sale-price">3.500.000₫</span>
-                        </div>
-                        <div class="flash-stock">
-                            <div class="stock-bar">
-                                <div class="stock-fill" style="width: 40%;"></div>
-                            </div>
-                            <span class="stock-text">Còn 8/20 sản phẩm</span>
-                        </div>
-                        <button class="btn btn-danger btn-sm w-100 mt-2">Mua Ngay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     Product Detail Modal 
-    <div class="modal fade" id="productModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProductTitle">Chi Tiết Sản Phẩm</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img id="modalProductImage" src="/placeholder.svg" alt="Sản Phẩm" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-6">
-                            <h3 id="modalProductName">Tên Sản Phẩm</h3>
-                            <p class="text-muted">Điện Tử</p>
-                            <h2 class="text-primary mb-4" id="modalProductPrice">0₫</h2>
-                            <p id="modalProductDescription">Mô tả sản phẩm ở đây.</p>
-                            <div class="d-grid gap-2 mt-4">
-                                <button class="btn btn-primary btn-lg">Mua Ngay</button>
-                                <button class="btn btn-outline-secondary">Thêm Vào Giỏ</button>
-                            </div>
-                            <div class="product-meta mt-4">
-                                <p><strong>Người Bán:</strong> Cửa Hàng Cao Cấp</p>
-                                <p><strong>Tình Trạng:</strong> Hàng Mới</p>
-                                <p><strong>Vận Chuyển:</strong> Miễn Phí</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     Sell Modal 
-    <div class="modal fade" id="sellModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Đăng Sản Phẩm</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Tên Sản Phẩm</label>
-                            <input type="text" class="form-control" placeholder="Nhập tên sản phẩm">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Danh Mục</label>
-                            <select class="form-select">
-                                <option>Điện Tử</option>
-                                <option>Thời Trang</option>
-                                <option>Nhà Cửa & Vườn</option>
-                                <option>Thể Thao</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Giá (₫)</label>
-                            <input type="number" class="form-control" placeholder="0">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Mô Tả</label>
-                            <textarea class="form-control" rows="3" placeholder="Mô tả sản phẩm của bạn"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Hình Ảnh Sản Phẩm</label>
-                            <input type="file" class="form-control">
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Đăng Sản Phẩm</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     Footer 
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -448,10 +228,10 @@
                 <div class="col-md-4">
                     <h5>Liên Kết Nhanh</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Về Chúng Tôi</a></li>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="#products">Sản Phẩm</a></li>
+                        <li><a href="categories/sell.html">Bán Hàng</a></li>
                         <li><a href="#">Liên Hệ</a></li>
-                        <li><a href="#">Điều Khoản Dịch Vụ</a></li>
-                        <li><a href="#">Chính Sách Bảo Mật</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -465,41 +245,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const endOfDay = new Date();
-            endOfDay.setHours(23, 59, 59, 999);
-            const timeLeft = endOfDay - now;
-
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        function showProductDetail(name, price, description) {
-            document.getElementById('modalProductName').textContent = name;
-            document.getElementById('modalProductTitle').textContent = name;
-            document.getElementById('modalProductPrice').textContent = price;
-            document.getElementById('modalProductDescription').textContent = description;
-            
-            const modal = new bootstrap.Modal(document.getElementById('productModal'));
-            modal.show();
-        }
-
-        document.querySelectorAll('.filter-buttons .btn').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.filter-buttons .btn').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
