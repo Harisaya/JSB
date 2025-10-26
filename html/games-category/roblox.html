@@ -1,438 +1,126 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox - GameHub</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="../mainforgames.html">
-                <span class="brand-icon">G</span>
-                GameHub
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../mainforgames.html">Trang Chủ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Roblox</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary ms-3">Đăng Nhập</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let currentImageIndex = 0;
+    let dragStartX = 0;
+    let isDragging = false;
+    let currentPage = 1;
+    const productsPerPage = 8;
 
-    <!-- Category Header -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">🎮 Roblox Accounts</h1>
-            <p class="hero-subtitle">Mua acc Roblox chất lượng cao với giá tốt nhất. Hàng ngàn acc đã được bán thành công.</p>
-        </div>
-    </section>
-
-    <!-- Filter & Sort -->
-    <section class="products">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
-                <h2 class="section-title mb-0">Acc Roblox</h2>
-                <div class="filter-buttons">
-                    <button class="btn btn-sm btn-outline-secondary active">Giá Thấp</button>
-                    <button class="btn btn-sm btn-outline-secondary">Giá Cao</button>
-                    <button class="btn btn-sm btn-outline-secondary">Robux Cao</button>
-                    <button class="btn btn-sm btn-outline-secondary">Hot Nhất</button>
-                </div>
-            </div>
-
-            <!-- Product Grid with 8 items per page -->
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-badge">Hot</div>
-                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=250&h=250&fit=crop" alt="Roblox Acc" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Premium 50K</h5>
-                            <p class="product-category">50K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">550.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288810', name: 'Roblox Premium 50K', category: 'ACC ROBLOX', price: '550.000₫', paymentPrice: '495.000₫', rank: '50K+', description: 'Acc Roblox Premium với 50K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=250&h=250&fit=crop" alt="Roblox Elite" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Premium 100K</h5>
-                            <p class="product-category">100K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">950.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288811', name: 'Roblox Premium 100K', category: 'ACC ROBLOX', price: '950.000₫', paymentPrice: '855.000₫', rank: '100K+', description: 'Acc Roblox Premium với 100K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-badge sale">Giảm Giá</div>
-                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=250&h=250&fit=crop" alt="Roblox Starter" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Starter 10K</h5>
-                            <p class="product-category">10K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">150.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288812', name: 'Roblox Starter 10K', category: 'ACC ROBLOX', price: '150.000₫', paymentPrice: '135.000₫', rank: '10K+', description: 'Acc Roblox Starter với 10K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=250&h=250&fit=crop" alt="Roblox Pro" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Pro 200K</h5>
-                            <p class="product-category">200K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.800.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288813', name: 'Roblox Pro 200K', category: 'ACC ROBLOX', price: '1.800.000₫', paymentPrice: '1.620.000₫', rank: '200K+', description: 'Acc Roblox Pro với 200K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <div class="product-badge">Mới</div>
-                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=250&h=250&fit=crop" alt="Roblox Plus" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Plus 75K</h5>
-                            <p class="product-category">75K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">700.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288814', name: 'Roblox Plus 75K', category: 'ACC ROBLOX', price: '700.000₫', paymentPrice: '630.000₫', rank: '75K+', description: 'Acc Roblox Plus với 75K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=250&h=250&fit=crop" alt="Roblox Max" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Max 150K</h5>
-                            <p class="product-category">150K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">1.350.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288815', name: 'Roblox Max 150K', category: 'ACC ROBLOX', price: '1.350.000₫', paymentPrice: '1.215.000₫', rank: '150K+', description: 'Acc Roblox Max với 150K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=250&h=250&fit=crop" alt="Roblox Ultra" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Ultra 30K</h5>
-                            <p class="product-category">30K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">300.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288816', name: 'Roblox Ultra 30K', category: 'ACC ROBLOX', price: '300.000₫', paymentPrice: '270.000₫', rank: '30K+', description: 'Acc Roblox Ultra với 30K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product-card">
-                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=250&h=250&fit=crop" alt="Roblox Mega" class="product-image">
-                        <div class="product-info">
-                            <h5 class="product-title">Roblox Mega 250K</h5>
-                            <p class="product-category">250K Robux</p>
-                            <div class="product-footer">
-                                <span class="product-price">2.200.000₫</span>
-                                <button class="btn btn-sm btn-primary" onclick="showProductDetail({id: '288817', name: 'Roblox Mega 250K', category: 'ACC ROBLOX', price: '2.200.000₫', paymentPrice: '1.980.000₫', rank: '250K+', description: 'Acc Roblox Mega với 250K+ Robux.', contact: 'Zalo:0971882507'})">Xem</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination-container mt-5">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center" id="paginationNav">
-                        <li class="page-item" id="prevBtn">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-page="5">5</a></li>
-                        <li class="page-item" id="nextBtn">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Detail Modal -->
-    <div class="modal fade" id="productModal" tabindex="-1">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Chi Tiết Sản Phẩm</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="product-gallery">
-                                <div class="main-image-container" id="mainImageContainer">
-                                    <img id="mainImage" src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=500&h=500&fit=crop" alt="Product" class="main-image" draggable="true">
-                                    <div class="image-nav-arrow left" onclick="previousImage()">❮</div>
-                                    <div class="image-nav-arrow right" onclick="nextImage()">❯</div>
-                                </div>
-                                
-                                <div class="thumbnail-container">
-                                    <div class="thumbnail-scroll" id="thumbnailScroll">
-                                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=80&h=80&fit=crop" class="thumbnail active" onclick="selectThumbnail(this, 0)" alt="Roblox Screenshot 1">
-                                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 1)" alt="Roblox Screenshot 2">
-                                        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 2)" alt="Roblox Screenshot 3">
-                                        <img src="https://images.unsplash.com/photo-1538481143235-5d630e50c6da?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 3)" alt="Roblox Screenshot 4">
-                                        <img src="https://images.unsplash.com/photo-1511512578615-a3eb3dd08d33?w=80&h=80&fit=crop" class="thumbnail" onclick="selectThumbnail(this, 4)" alt="Roblox Screenshot 5">
-                                    </div>
-                                    <button class="thumbnail-nav-btn right" onclick="scrollThumbnails('right')">›</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="product-detail-info">
-                                <div class="product-header-info">
-                                    <div class="info-badge">
-                                        <strong>MÃ SỐ:</strong> <span id="productId">288810</span>
-                                    </div>
-                                    <div class="info-badge">
-                                        <strong>MỤC:</strong> <span id="productCategory">ACC ROBLOX</span>
-                                    </div>
-                                </div>
-
-                                <h2 id="productTitle" class="product-detail-title">Roblox Premium 50K</h2>
-
-                                <div class="price-section">
-                                    <div class="price-item">
-                                        <span class="price-label">Giá</span>
-                                        <span class="price-value" id="productPrice">550.000₫</span>
-                                    </div>
-                                    <div class="price-item">
-                                        <span class="price-label">ATM/MOMO chỉ cần</span>
-                                        <span class="price-value payment-price" id="paymentPrice">495.000₫</span>
-                                    </div>
-                                </div>
-
-                                <div class="details-section">
-                                    <div class="detail-item">
-                                        <span class="detail-label">▸ Robux</span>
-                                        <span class="detail-value" id="productRank">50K+</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <span class="detail-label">▸ Ghi chú</span>
-                                        <span class="detail-value" id="productDescription">Acc Roblox Premium với 50K+ Robux.</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <span class="detail-label">▸ Liên hệ</span>
-                                        <span class="detail-value" id="productContact">Zalo:0971882507</span>
-                                    </div>
-                                </div>
-
-                                <button class="btn btn-danger btn-lg w-100 mt-4 mb-3">
-                                    🛒 MUA NGAY
-                                </button>
-
-                                <div class="payment-info">
-                                    <p class="mb-2"><strong>NAP QUA ATM/MOMO</strong></p>
-                                    <a href="#" class="view-link">XEM TẠI ĐÂY →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>GameHub</h5>
-                    <p>Sàn mua bán acc game uy tín.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Liên Kết Nhanh</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="../mainforgames.html">Trang Chủ</a></li>
-                        <li><a href="#">Liên Hệ</a></li>
-                        <li><a href="#">Điều Khoản</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Kết Nối</h5>
-                    <p>Theo dõi chúng tôi trên mạng xã hội.</p>
-                </div>
-            </div>
-            <hr class="my-4">
-            <p class="text-center mb-0">&copy; 2025 GameHub.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        let currentImageIndex = 0;
-        let dragStartX = 0;
-        let isDragging = false;
-        let currentPage = 1;
-        const productsPerPage = 8;
-
-        function initPagination() {
-            const productCards = document.querySelectorAll('.row.g-4 > .col-lg-3');
-            const totalPages = Math.ceil(productCards.length / productsPerPage);
-            
-            function showPage(page) {
-                currentPage = page;
-                productCards.forEach((card, index) => {
-                    const pageNum = Math.floor(index / productsPerPage) + 1;
-                    card.style.display = pageNum === page ? 'block' : 'none';
-                });
-                
-                document.querySelectorAll('.pagination .page-link[data-page]').forEach(btn => {
-                    btn.parentElement.classList.remove('active');
-                    if (parseInt(btn.dataset.page) === page) {
-                        btn.parentElement.classList.add('active');
-                    }
-                });
-                
-                document.getElementById('prevBtn').classList.toggle('disabled', page === 1);
-                document.getElementById('nextBtn').classList.toggle('disabled', page === totalPages);
-            }
+    function initPagination() {
+        const productCards = document.querySelectorAll('.row.g-4 > .col-lg-3');
+        const totalPages = Math.ceil(productCards.length / productsPerPage);
+        
+        function showPage(page) {
+            currentPage = page;
+            productCards.forEach((card, index) => {
+                const pageNum = Math.floor(index / productsPerPage) + 1;
+                card.style.display = pageNum === page ? 'block' : 'none';
+            });
             
             document.querySelectorAll('.pagination .page-link[data-page]').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    showPage(parseInt(btn.dataset.page));
-                });
+                btn.parentElement.classList.remove('active');
+                if (parseInt(btn.dataset.page) === page) {
+                    btn.parentElement.classList.add('active');
+                }
             });
             
-            document.getElementById('prevBtn').querySelector('.page-link').addEventListener('click', (e) => {
+            document.getElementById('prevBtn').classList.toggle('disabled', page === 1);
+            document.getElementById('nextBtn').classList.toggle('disabled', page === totalPages);
+        }
+        
+        document.querySelectorAll('.pagination .page-link[data-page]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (currentPage > 1) showPage(currentPage - 1);
+                showPage(parseInt(btn.dataset.page));
             });
-            
-            document.getElementById('nextBtn').querySelector('.page-link').addEventListener('click', (e) => {
-                e.preventDefault();
-                if (currentPage < totalPages) showPage(currentPage + 1);
-            });
-            
-            showPage(1);
-        }
-
-        function showProductDetail(product) {
-            document.getElementById('productId').textContent = product.id;
-            document.getElementById('productTitle').textContent = product.name;
-            document.getElementById('productCategory').textContent = product.category;
-            document.getElementById('productPrice').textContent = product.price;
-            document.getElementById('paymentPrice').textContent = product.paymentPrice;
-            document.getElementById('productRank').textContent = product.rank;
-            document.getElementById('productDescription').textContent = product.description;
-            document.getElementById('productContact').textContent = product.contact;
-            
-            currentImageIndex = 0;
-            updateMainImage();
-            
-            const modal = new bootstrap.Modal(document.getElementById('productModal'));
-            modal.show();
-        }
-
-        function selectThumbnail(element, index) {
-            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
-            element.classList.add('active');
-            currentImageIndex = index;
-            updateMainImage();
-        }
-
-        function nextImage() {
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
-            document.querySelectorAll('.thumbnail')[currentImageIndex].click();
-        }
-
-        function previousImage() {
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
-            document.querySelectorAll('.thumbnail')[currentImageIndex].click();
-        }
-
-        function updateMainImage() {
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            document.getElementById('mainImage').src = thumbnails[currentImageIndex].src;
-        }
-
-        function scrollThumbnails(direction) {
-            const container = document.getElementById('thumbnailScroll');
-            const scrollAmount = 100;
-            if (direction === 'right') {
-                container.scrollLeft += scrollAmount;
-            }
-        }
-
-        const mainImageContainer = document.getElementById('mainImageContainer');
-        const mainImage = document.getElementById('mainImage');
-
-        mainImage.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            dragStartX = e.clientX;
         });
-
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const dragDistance = e.clientX - dragStartX;
-            if (dragDistance > 50) {
-                previousImage();
-                isDragging = false;
-            }
+        
+        document.getElementById('prevBtn').querySelector('.page-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentPage > 1) showPage(currentPage - 1);
         });
+        
+        document.getElementById('nextBtn').querySelector('.page-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentPage < totalPages) showPage(currentPage + 1);
+        });
+        
+        showPage(1);
+    }
 
-        document.addEventListener('mouseup', () => {
+    function showProductDetail(product) {
+        document.getElementById('productId').textContent = product.id;
+        document.getElementById('productTitle').textContent = product.name;
+        document.getElementById('productCategory').textContent = product.category;
+        document.getElementById('productPrice').textContent = product.price;
+        document.getElementById('paymentPrice').textContent = product.paymentPrice;
+        document.getElementById('productRank').textContent = product.rank;
+        document.getElementById('productDescription').textContent = product.description;
+        document.getElementById('productContact').textContent = product.contact;
+        
+        currentImageIndex = 0;
+        updateMainImage();
+        
+        const modal = new bootstrap.Modal(document.getElementById('productModal'));
+        modal.show();
+    }
+
+    function selectThumbnail(element, index) {
+        document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+        element.classList.add('active');
+        currentImageIndex = index;
+        updateMainImage();
+    }
+
+    function nextImage() {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
+        document.querySelectorAll('.thumbnail')[currentImageIndex].click();
+    }
+
+    function previousImage() {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
+        document.querySelectorAll('.thumbnail')[currentImageIndex].click();
+    }
+
+    function updateMainImage() {
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        document.getElementById('mainImage').src = thumbnails[currentImageIndex].src;
+    }
+
+    function scrollThumbnails(direction) {
+        const container = document.getElementById('thumbnailScroll');
+        const scrollAmount = 100;
+        if (direction === 'right') {
+            container.scrollLeft += scrollAmount;
+        }
+    }
+
+    const mainImageContainer = document.getElementById('mainImageContainer');
+    const mainImage = document.getElementById('mainImage');
+
+    mainImage.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        dragStartX = e.clientX;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const dragDistance = e.clientX - dragStartX;
+        if (dragDistance > 50) {
+            previousImage();
             isDragging = false;
-        });
+        }
+    });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            initPagination();
-        });
-    </script>
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initPagination();
+        
+    });
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
